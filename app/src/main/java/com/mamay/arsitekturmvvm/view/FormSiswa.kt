@@ -2,6 +2,8 @@ package com.mamay.arsitekturmvvm.view
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -11,4 +13,11 @@ fun formSiswa(
     pilihanJK: List<String>,
     onSubmitButtonClicked: (MutableList<String>) -> Unit,
     modifier: Modifier = Modifier
-){}
+){
+    var txtNama by rememberSaveable { mutableStateOf("") }
+    var txtAlamat by remember { mutableStateOf("") }
+    var txtGender by remember { mutableStateOf("") }
+    val listData: MutableList<String> = mutableStateOf(txtNama,txtAlamat,txtGender)
+
+
+}
