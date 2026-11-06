@@ -1,7 +1,9 @@
 package com.mamay.arsitekturmvvm.model
 
+import com.mamay.arsitekturmvvm.R
+
 object DataJk {
-    val JenisK = listOf(
+    val jenisKelamin = listOf(
         R.string.laki,
         R.string.wanita
     )
